@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Desperdício Zero</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+  <header>
+    <div class="header-container">
+      <h1>Desperdício Zero</h1>
+    </div>
+  </header>
+
+  <main>
+  <section class="intro">
+    <h4>Conheça o impacto do desperdício de alimentos e como podemos ajudar a mudar esse cenário.</h4>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae vestibulum vestibulum.</p>
+  </section>
+
+  <section class="info-section">
+  <div class="info-grid">
+    <div class="info-card" onclick="toggleCard(this)">
+      <div class="info-header">
+        <h2>Título 1</h2>
+        <span class="arrow">▼</span>
+      </div>
+      <div class="info-content hidden">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+      </div>
+    </div>
+
+    <div class="info-card" onclick="toggleCard(this)">
+      <div class="info-header">
+        <h2>Título 2</h2>
+        <span class="arrow">▼</span>
+      </div>
+      <div class="info-content hidden">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+      </div>
+    </div>
+
+    <div class="info-card" onclick="toggleCard(this)">
+      <div class="info-header">
+        <h2>Título 3</h2>
+        <span class="arrow">▼</span>
+      </div>
+      <div class="info-content hidden">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+      </div>
+    </div>
+    </div>
+    </section>
+
+    </main>
+
+  <footer>
+    <div class="footer-container">
+      <h2>Cadastre-se como doador</h2>
+      <form>
+        <input type="text" placeholder="Seu nome" required />
+        <input type="email" placeholder="Seu e-mail" required />
+        <input type="text" placeholder="Cidade" required />
+        <button type="submit">Cadastrar</button>
+      </form>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

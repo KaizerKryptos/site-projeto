@@ -1,0 +1,194 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background-color: #f9f9f9;
+  color: #333;
+}
+
+/* Cabeçalho */
+header .header-container {
+  background-color: #19ac80;
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+}
+
+/* Seção de introdução */
+.intro {
+  padding: 40px 20px;
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.intro h4 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+/* Seção de informação */
+.info-section {
+  padding: 60px 20px;
+  background-color: #f7f7f7;
+}
+
+/* Grade de cartões */
+.info-grid {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+}
+
+/* Cartão */
+.info-card {
+  position: relative;
+  background-color: #19ac80;
+  color: white;
+  width: 300px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.5s ease, opacity 0.5s ease;
+  opacity: 0;
+  transform: translateY(50px);
+  z-index: 1;
+}
+
+.info-card.appear {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Cabeçalho do cartão */
+.info-header {
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #19ac80;
+  border-radius: 8px;
+  z-index: 2;
+  position: relative;
+}
+
+.arrow {
+  font-size: 1.5rem;
+  transition: transform 0.3s ease;
+}
+
+.info-card.open .arrow {
+  transform: rotate(180deg);
+}
+
+/* Conteúdo expansível */
+.info-content {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background: white;
+  color: #333;
+  padding: 20px;
+  border-radius: 0 0 8px 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  display: none;
+  z-index: 0;
+}
+
+.info-card.open .info-content {
+  display: block;
+}
+
+/* Caixas de informação antigas (se ainda forem usadas) */
+.info-boxes {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 30px 20px;
+}
+
+.info-box {
+  flex: 1 1 300px;
+  max-width: 300px;
+  height: 300px;
+  background-color: #c6f6d5;
+  border: 2px solid #19ac80;
+  padding: 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+.info-box:hover {
+  background-color: #b2f0c5;
+}
+
+.info-box p.hidden {
+  display: none;
+}
+
+/* Rodapé */
+footer .footer-container {
+  background-color: #19ac80;
+  color: white;
+  text-align: center;
+  margin-top: 210px;
+  padding: 30px 20px;
+}
+
+footer form {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+}
+
+footer input,
+footer button {
+  padding: 10px;
+  width: 80%;
+  max-width: 400px;
+  border: none;
+  border-radius: 5px;
+}
+
+footer input {
+  background: #fff;
+}
+
+footer button {
+  background: linear-gradient(135deg, #19ac80, #148a66);
+  color: white;
+  font-weight: bold;
+  font-size: 1rem;
+  padding: 12px 24px;
+  width: auto;
+  max-width: 200px;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+footer button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+  background: linear-gradient(135deg, #19ac80, #148a66);
+}
