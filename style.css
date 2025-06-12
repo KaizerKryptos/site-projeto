@@ -1,0 +1,273 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Lora', serif;
+  line-height: 1.6;
+  background-color: #f5f2e7;
+  color: #4b3b2a;
+}
+
+/* Cabeçalho */
+header .header-container {
+  background-color: #588157;
+  color: #f5f2e7;
+  text-align: center;
+  padding: 20px 0;
+}
+
+/* Seção de introdução */
+.intro {
+  padding: 40px 20px;
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.intro h4 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+/* Seção de informação */
+.info-section {
+  padding: 60px 20px;
+  background-color: #f5f2e7;
+}
+
+/* Grade de cartões */
+.info-grid {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Cartão */
+.info-card {
+  background-color: #588157;
+  color: #f5f2e7;
+  width: 300px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.5s ease, opacity 0.5s ease;
+  opacity: 0;
+  transform: translateY(50px);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.info-card.appear {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Cabeçalho do cartão */
+.info-header {
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #588157;
+  border-radius: 8px;
+  z-index: 2;
+  position: relative;
+}
+
+.arrow {
+  font-size: 1.5rem;
+  transition: transform 0.3s ease;
+}
+
+.info-card.open .arrow {
+  transform: rotate(180deg);
+}
+
+/* Conteúdo expansível */
+.info-content {
+  background: #f5f2e7;
+  color: #333;
+  padding: 20px;
+  display: none;
+  animation: slideDown 0.3s ease-in-out;
+  border-top: 1px solid #ccc;
+}
+
+.info-card.open .info-content {
+  display: block;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Caixas de informação antigas (se ainda forem usadas) */
+.info-boxes {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 30px 20px;
+}
+
+.info-box {
+  flex: 1 1 300px;
+  max-width: 300px;
+  height: 300px;
+  background-color: #a3b18a;
+  border: 2px solid #588157;
+  padding: 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+.info-box:hover {
+  background-color: #a3b18a;
+}
+
+.info-box p.hidden {
+  display: none;
+}
+
+/* Rodapé */
+footer .footer-container {
+  background-color: #3a5a40;
+  color: white;
+  text-align: center;
+  margin-top: 210px;
+  padding: 30px 20px;
+}
+
+footer form {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+}
+
+footer input,
+footer button {
+  padding: 10px;
+  width: 80%;
+  max-width: 400px;
+  border: none;
+  border-radius: 5px;
+}
+
+footer input {
+  background: #dad7cd;
+}
+
+footer button {
+  background: linear-gradient(135deg, #588157, #3a5a40);
+  color: #dad7cd;
+  font-weight: bold;
+  font-size: 1rem;
+  padding: 12px 24px;
+  width: auto;
+  max-width: 200px;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+footer button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+  background: linear-gradient(135deg, #19ac80, #148a66);
+}
+
+.footer-contact {
+  margin-top: 30px;
+  text-align: center;
+}
+
+.footer-contact p {
+  margin-bottom: 10px;
+  color: white;
+  font-size: 0.95rem;
+}
+
+.footer-contact a {
+  color: #fff;
+  text-decoration: underline;
+  transition: color 0.3s ease;
+}
+
+.footer-contact a:hover {
+  color: #dad7cd;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 10px;
+}
+
+.social-icons a {
+  display: inline-block;
+  transition: transform 0.3s ease;
+}
+
+.social-icons img {
+  width: 28px;
+  height: 28px;
+  filter: brightness(0) invert(1); /* deixa os ícones brancos se forem pretos */
+}
+
+.social-icons a:hover {
+  transform: scale(1.2);
+}
+
+@media (max-width: 768px) {
+  .info-grid {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .info-card {
+    width: 90%;
+    max-width: 340px;
+  }
+
+  footer form {
+    width: 100%;
+  }
+
+  footer input,
+  footer button {
+    width: 90%;
+  }
+
+  .social-icons img {
+    width: 24px;
+    height: 24px;
+  }
+}
